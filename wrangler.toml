@@ -1,13 +1,14 @@
 name = "nodecrypt"
 main = "worker/index.js"
-
 compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
 
+# 配置静态资源
 [assets]
 directory = "./dist"
-binding = "ASSETS"
 not_found_handling = "single-page-application"
+run_worker_first = true
+binding = "ASSETS"
 
 [durable_objects]
 bindings = [
